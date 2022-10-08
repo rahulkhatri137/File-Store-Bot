@@ -39,8 +39,6 @@ async def add_user(id, user_name):
             usr = Broadcast(id, user_name)
             SESSION.add(usr)
             SESSION.commit()
-        else:
-            pass
           
 async def full_userbase():
     users = SESSION.query(Broadcast).all()
